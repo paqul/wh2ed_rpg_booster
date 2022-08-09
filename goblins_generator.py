@@ -2,15 +2,15 @@ from raw_generator import GenerateHumanoid
 from random import randint
 
 
-class GenerateOrc(GenerateHumanoid):
+class GenerateGreen(GenerateHumanoid):
 
     def __init__(self, green_kind="goblin"):
         super().__init__()
         self.green_kind = green_kind
-        orcs_name = ["Mugrik" ,"Zogdulk", "Pudrib", "Hoglarg", "Nus", "Redeye", "Mudmouth", "Globteeth", "Oafbone",
-                     "Bearbite"]
-        self.name = orcs_name[randint(0, len(orcs_name)-1)]
-        self.weapon = ["chopper"]
+        green_name = ["Mugrik", "Zogdulk", "Pudrib", "Hoglarg", "Nus", "Redeye", "Mudmouth", "Globteeth", "Oafbone",
+                      "Bearbite", "Greeneye", "Blueeye"]
+        self.name = green_name[randint(0, len(green_name)-1)]
+        self.weapon = []
         if green_kind == "snotling":
             self.snotling()
         elif green_kind == "goblin":
